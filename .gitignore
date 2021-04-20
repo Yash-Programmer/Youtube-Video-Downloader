@@ -1,0 +1,8 @@
+dist/
+build/
+.idea/
+__pycache__/
+*.spec
+src/
+setup.py
+Application/

@@ -1,0 +1,7 @@
+pafy==0.5.5
+wget==3.2
+future==0.18.2
+pytube==10.4.1
+Pillow==8.1.0
+pyttsx3==2.90
+playsound==1.2.2
