@@ -60,26 +60,26 @@ def check():
 
 def DownloadVideo():
     Downloading_Label_Text['text'] = ''
-    check()
-    playsound.playsound(r'C:\Users\Lenovo\PycharmProjects\YouTube Video Downloader\Files\Downloading.mp3')
+    #check()
+    #playsound.playsound(r'C:\Users\Lenovo\PycharmProjects\YouTube Video Downloader\Files\Downloading.mp3')
     url = URL_Entry.get()
     choice = quality_choices.get()
     if choice == choices[0]:
         pafy.new(url).getbest().download(Folder_Path)
-        Downloading_Label_Text['text'] = 'Downloaded Successfully'
-        playsound.playsound(r'YouTube Video Downloader\Files\Downloaded Successfully.mp3')
+        #Downloading_Label_Text['text'] = 'Downloaded Successfully'
+        #playsound.playsound(r'YouTube Video Downloader\Files\Downloaded Successfully.mp3')
     elif choice == choices[1]:
         YouTube(url).streams.first().download(Folder_Path)
         Downloading_Label_Text['text'] = 'Downloaded Successfully'
-        playsound.playsound(r'C:\Users\Lenovo\PycharmProjects\YouTube Video Downloader\Files\Downloaded Successfully.mp3')
+        #playsound.playsound(r'C:\Users\Lenovo\PycharmProjects\YouTube Video Downloader\Files\Downloaded Successfully.mp3')
     elif choice == choices[2]:
         YouTube(url).streams.filter(only_audio=True).first().download(Folder_Path)
         Downloading_Label_Text['text'] = 'Downloaded Successfully'
-        playsound.playsound(r'C:\Users\Lenovo\PycharmProjects\YouTube Video Downloader\Files\Downloaded Successfully.mp3')
+        #playsound.playsound(r'C:\Users\Lenovo\PycharmProjects\YouTube Video Downloader\Files\Downloaded Successfully.mp3')
     elif choice == choices[3]:
         YouTube(url).streams.filter(only_video=True).first().download(Folder_Path)
         Downloading_Label_Text['text'] = 'Downloaded Successfully'
-        playsound.playsound(r'C:\Users\Lenovo\PycharmProjects\YouTube Video Downloader\Files\Downloaded Successfully.mp3')
+        #playsound.playsound(r'C:\Users\Lenovo\PycharmProjects\YouTube Video Downloader\Files\Downloaded Successfully.mp3')
 
 def Show_Path(a):
     if Folder_Path == '':
@@ -91,7 +91,7 @@ root = Tk()
 root.resizable(width=False, height=False)
 root.title("Youtube Video Downloader__By Yash")
 root.geometry('477x700')
-root.iconbitmap(r'C:\Users\Lenovo\PycharmProjects\YouTube Video Downloader\Files\Logo.ico')  # Files/Logo.ico
+#root.iconbitmap(r'C:\Users\Lenovo\PycharmProjects\YouTube Video Downloader\Files\Logo.ico')  # Files/Logo.ico
 
 Frame1 = LabelFrame(root, text='URL')
 Frame1.pack()
@@ -143,8 +143,8 @@ Downloading_Label_Text.pack()
 By_Label = Label(root, text='By Yash Varshney', font=['Times New Roman', 20])
 By_Label.pack()
 
-My_Image = ImageTk.PhotoImage(Image.open(r'C:\Users\Lenovo\PycharmProjects\YouTube Video Downloader\Files\Pic.png'))  # Files/Pic.png
-My_Image_Label = Label(image=My_Image)
-My_Image_Label.pack()
+#My_Image = ImageTk.PhotoImage(Image.open(r'C:\Users\Lenovo\PycharmProjects\YouTube Video Downloader\Files\Pic.png'))  # Files/Pic.png
+#My_Image_Label = Label(image=My_Image)
+#My_Image_Label.pack()
 
 root.mainloop()
